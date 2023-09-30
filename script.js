@@ -1,7 +1,13 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
-
+function handleKey(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent the default behavior of the Enter key (form submission)
+      addTask();
+    }
+  }
+  
 function addTask(){
     if(inputBox.value === ''){
         alert('You must write something');
